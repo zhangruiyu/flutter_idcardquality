@@ -30,7 +30,7 @@ public class IdcardqualityPlugin implements MethodCallHandler {
 
     @Override
     public void onMethodCall(final MethodCall call, final Result result) {
-        if (call.method.equals("getPlatformVersion")) {
+        if (call.method.equals("openIdcardQuality")) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {

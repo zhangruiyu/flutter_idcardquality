@@ -43,8 +43,6 @@ public class TransparentActivity extends Activity {
 //            startActivity(intent);
 //            result.success(String.valueOf(data.getIntExtra("side", 0)));
             portraitImgs = data.getByteArrayExtra("portraitImg");
-
-            destroyFlutter();
         } else {
             portraitImgs = null;
         }
