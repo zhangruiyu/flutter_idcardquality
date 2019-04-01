@@ -18,13 +18,15 @@ public class TransparentActivity extends Activity {
     static MethodCall call;
     static MethodChannel.Result result;
     private static final int INTO_IDCARDSCAN_PAGE = 100;
+    byte[] portraitImgs;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         Intent intent = new Intent(this, IDCardScanActivity.class);
         intent.putExtra("side", Integer.parseInt(Objects.requireNonNull(call.argument("side")).toString()));
-        intent.putExtra("isvertical", true);
+        intent.putExtra("isvertical", false);
         startActivityForResult(intent, INTO_IDCARDSCAN_PAGE);
     }
 
@@ -39,7 +41,12 @@ public class TransparentActivity extends Activity {
 //                intent.putExtra("portraitImg", data.getByteArrayExtra("portraitImg"));
 //            }
 //            startActivity(intent);
-            result.success(String.valueOf(data.getIntExtra("side", 0)));
+//            result.success(String.valueOf(data.getIntExtra("side", 0)));
+            portraitImgs = data.getByteArrayExtra("portraitImg");
+
+            destroyFlutter();
+        } else {
+            portraitImgs = null;
         }
         onBackPressed();
 
@@ -47,9 +54,18 @@ public class TransparentActivity extends Activity {
 
     @Override
     protected void onDestroy() {
+        if (portraitImgs != null) {
+            result.success(portraitImgs);
+        } else {
+            result.error("没有选择成功", "", "");
+        }
+        destroyFlutter();
+        super.onDestroy();
+    }
+
+    void destroyFlutter() {
         TransparentActivity.call = null;
         TransparentActivity.result = null;
-        super.onDestroy();
     }
 
     public static void start(Activity activity, MethodCall call, MethodChannel.Result result) {
