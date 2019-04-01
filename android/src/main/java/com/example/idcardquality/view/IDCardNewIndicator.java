@@ -1,6 +1,6 @@
-package com.megvii.idcardlib.view;
+package com.example.idcardquality.view;
 
-import com.megvii.idcardlib.R;
+import com.example.idcardquality.R;
 import com.megvii.idcardquality.bean.IDCardAttr;
 import android.app.Activity;
 import android.content.Context;

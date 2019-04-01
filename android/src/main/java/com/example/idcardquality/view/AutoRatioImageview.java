@@ -1,9 +1,6 @@
-package com.megvii.idcardlib.view;
-
-import com.megvii.idcardlib.R;
+package com.example.idcardquality.view;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 

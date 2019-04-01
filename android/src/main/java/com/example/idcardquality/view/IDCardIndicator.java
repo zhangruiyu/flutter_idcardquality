@@ -1,4 +1,4 @@
-package com.megvii.idcardlib.view;
+package com.example.idcardquality.view;
 
 //import com.megvii.idcard.sdk.IDCard.Card;
 //import com.megvii.idcard.sdk.IDCard.Faculae;
@@ -10,10 +10,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.*;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
-import com.megvii.idcardlib.R;
+import com.example.idcardquality.R;
 import com.megvii.idcardquality.bean.IDCardAttr;
 
 /**

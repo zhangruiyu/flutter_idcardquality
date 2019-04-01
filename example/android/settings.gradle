@@ -1,4 +1,4 @@
-include ':app', ':IDCardLib'
+include ':app'
 
 def flutterProjectRoot = rootProject.projectDir.parentFile.toPath()
 

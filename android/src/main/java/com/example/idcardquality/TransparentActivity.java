@@ -5,8 +5,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.megvii.idcardlib.IDCardScanActivity;
-
 import java.util.Objects;
 
 import androidx.annotation.Nullable;

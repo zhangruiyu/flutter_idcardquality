@@ -27,13 +27,26 @@ android {
     defaultConfig {
         minSdkVersion 19
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters "armeabi-v7a"
+        }
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+    sourceSets{
+        main{
+            jniLibs.srcDir(['libs'])
+        }
     }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':IDCardLib')
+    androidTestCompile('androidx.test.espresso:espresso-core:3.1.0-alpha4', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation files('libs/idcardquality-proguard-1.2.2.jar')
 }

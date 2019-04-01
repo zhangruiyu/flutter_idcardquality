@@ -1,6 +1,6 @@
 package com.example.idcardquality;
 
-import com.megvii.idcardlib.util.Util;
+import com.example.idcardquality.util.Util;
 import com.megvii.idcardquality.IDCardQualityLicenseManager;
 import com.megvii.licensemanager.Manager;
 

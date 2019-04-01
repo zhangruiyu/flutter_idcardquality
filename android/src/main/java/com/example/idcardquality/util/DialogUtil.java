@@ -1,4 +1,4 @@
-package com.megvii.idcardlib.util;
+package com.example.idcardquality.util;
 
 import android.app.Activity;
 import android.app.AlertDialog;

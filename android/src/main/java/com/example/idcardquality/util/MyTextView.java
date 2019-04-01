@@ -1,4 +1,4 @@
-package com.megvii.idcardlib.util;
+package com.example.idcardquality.util;
 
 import android.content.Context;
 import android.graphics.Canvas;

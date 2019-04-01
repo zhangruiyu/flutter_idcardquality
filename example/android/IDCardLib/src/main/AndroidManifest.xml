@@ -14,7 +14,7 @@
     <application
         >
         <activity
-            android:name="com.megvii.idcardlib.IDCardScanActivity"
+            android:name="com.megvii.idcardlib.com.example.idcardquality.IDCardScanActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Holo.NoActionBar.TranslucentDecor"
             android:screenOrientation="portrait"
